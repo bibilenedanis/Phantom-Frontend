@@ -19,7 +19,7 @@ export default async function menu(pb) {
             document.getElementById('category-slider-items').innerHTML += `
              <button onclick="smoothScroll(document.getElementById('category-${product.category_id}'))"
                 class="flex-shrink-0 p-2 rounded-lg text-sm font-semibold text-gray-700 swiper-slide">
-                        <img src="${categoryImage ? categoryImage : 'https://placehold.co/50x50'}" alt="${product.category_name}" class="w-8 h-8 mx-auto mb-1"/>
+                        <img src="${categoryImage ? categoryImage : 'https://placehold.co/50x50'}" alt="${product.category_name}" class="w-24 h-14 mx-auto mb-1"/>
                         ${product.category_name}
                     </button>`;
 
@@ -42,7 +42,7 @@ export default async function menu(pb) {
         const image = pb.files.getUrl(product, product.product_image);
         let itemRow = `
                 <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-between m-2">
-                    <img src="${image ? image : 'https://placehold.co/100x100'}" alt="${product.product_name}" class="w-24 h-24 object-cover rounded-md" />
+                    <img src="${image ? image : 'https://placehold.co/100x100'}" alt="${product.product_name}" class="w-24 h-24 min-w-24 min-h-24 rounded-md" />
                     <div class="ml-4">
                         <h3 class="text-lg font-semibold">
                             <a href="/product/?${product.product_slug}">${product.product_name}</a>
