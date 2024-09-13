@@ -33,13 +33,13 @@ export  default async function payment(pb) {
 
     document.getElementById('payment_total_price').innerText = total + '₺';
 
-    window.fillPaymentForm = function () {
-        document.getElementById('card-number').value = '5571135571135575';
-        document.getElementById('card-name').value = 'Pw test';
-        document.getElementById('expiry-month').value = '12';
-        document.getElementById('expiry-year').value = '24';
-        document.getElementById('card-cvc').value = '000';
-    };
+    // window.fillPaymentForm = function () {
+    //     document.getElementById('card-number').value = '5571135571135575';
+    //     document.getElementById('card-name').value = 'Pw test';
+    //     document.getElementById('expiry-month').value = '12';
+    //     document.getElementById('expiry-year').value = '24';
+    //     document.getElementById('card-cvc').value = '000';
+    // };
 
     document.getElementById('payment_form').addEventListener('submit', async function (e) {
         e.preventDefault();

@@ -24,3 +24,5 @@ function parallel_run {
 open http://localhost:8000
 
 parallel_run "npm run watch" "./vendor/bin/jigsaw serve"
+
+kill -9 $(sudo lsof -iTCP -sTCP:LISTEN -n -P | grep 8000  | awk '{print $2}')
