@@ -1,0 +1,20 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "mix",
+        "watch": "mix watch",
+        "staging": "NODE_ENV=staging mix",
+        "prod": "mix --production"
+    },
+    "devDependencies": {
+        "laravel-mix": "^6.0.39",
+        "laravel-mix-jigsaw": "^2.0.0",
+        "nosleep.js": "^0.12.0",
+        "pocketbase": "^0.21.5",
+        "postcss": "^8.4.14",
+        "postcss-import": "^14.0.0",
+        "swiper": "^11.1.12",
+        "tailwindcss": "^3.1.6",
+        "toastify-js": "^1.12.0"
+    }
+}
