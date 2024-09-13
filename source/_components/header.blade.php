@@ -1,7 +1,7 @@
 <div class="bg-white p-4 flex items-center justify-between border-b border-gray-200 fixed top-0 z-50 left-0 w-full">
     <a href="{{ $backurl ?? '/' }}" class="text-gray-500">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-             xmlns="http://www.w3.org/2000/svg">
+             xmlns="https://github.com/bibilenedanis/Phantom-Frontend/blob/main/source/assets/images/sepet.svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
         </svg>
     </a>
