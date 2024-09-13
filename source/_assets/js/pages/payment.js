@@ -32,7 +32,7 @@ export  default async function payment(pb) {
     }
 
     document.getElementById('payment_total_price').innerText = total + '₺';
-
+    //
     // window.fillPaymentForm = function () {
     //     document.getElementById('card-number').value = '5571135571135575';
     //     document.getElementById('card-name').value = 'Pw test';

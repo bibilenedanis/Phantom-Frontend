@@ -11,5 +11,5 @@ fi
 npm run prod
 
 # use rsync to deploy the project to the server
-rsync -avzh ./build_production/* root@pw:/var/www/Phantom-Waitress/pb_public \
+rsync -avzh ./build_production/* root@pw:/var/www/keizy.phantomwaitress.com/pb_public \
     --exclude .DS_Store

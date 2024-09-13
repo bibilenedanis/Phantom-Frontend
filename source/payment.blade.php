@@ -3,11 +3,11 @@
 @section('body')
     @include('_components.header', ['backurl' => '/checkout'])
 
-{{--    <div class="max-w-md mx-auto p-3 flex justify-between items-center mt-4 border-t bg-white" id="payment_total">--}}
-{{--        <p class="text-lg font-bold">Toplam</p>--}}
+    <div class="max-w-md mx-auto p-3 flex justify-between items-center mt-4 border-t bg-white" id="payment_total">
+        <p class="text-lg font-bold">Toplam</p>
 {{--        <button onclick="fillPaymentForm()" class="bg-amber-500 rounded px-4 font-medium">Fill form</button>--}}
-{{--        <p class="text-lg font-bold text-red-600" id="payment_total_price">1000₺</p>--}}
-{{--    </div>--}}
+        <p class="text-lg font-bold text-red-600" id="payment_total_price">1000₺</p>
+    </div>
 
     <!-- Main Content -->
     <main class="max-w-md mx-auto mt-4 bg-white rounded-lg shadow-lg p-6 mb-4">
