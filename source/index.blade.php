@@ -47,31 +47,31 @@
     </div>
 
     <!-- Actions Section -->
-    <div class="grid grid-cols-3 gap-4 p-6 hidden">
-        <button class="flex flex-col items-center bg-gray-200 p-4 rounded-lg shadow-md">
-            <div class="text-4xl text-gray-600 mb-2">✋</div>
+    <div class="grid gap-4 p-6 mt-2" id="action_buttons_wrapper">
+        <a href="/call" id="call_waitress_button" class="flex flex-col items-center bg-red-500 p-4 rounded-lg shadow-md text-white hidden">
+            <div class="text-4xl mb-2">✋</div>
             <span>Garson Çağır</span>
-        </button>
-        <button class="flex flex-col items-center bg-red-500 p-4 rounded-lg shadow-md text-white">
-            <div class="text-4xl mb-2">🔍</div>
-            <span>QR kodu okut</span>
-        </button>
-        <button class="flex flex-col items-center bg-red-500 p-4 rounded-lg shadow-md text-white">
-            <div class="text-4xl mb-2">🧾</div>
-            <span>Hesap iste</span>
-        </button>
-        <button class="flex flex-col items-center bg-red-500 p-4 rounded-lg shadow-md text-white">
-            <div class="text-4xl mb-2">⭐</div>
-            <span>Değerlendir</span>
-        </button>
-        <button class="flex flex-col items-center bg-red-500 p-4 rounded-lg shadow-md text-white">
+        </a>
+        <a href="#" id="show_previous_orders_button" class="flex flex-col items-center bg-red-500 p-4 rounded-lg shadow-md text-white hidden">
             <div class="text-4xl mb-2">🍽</div>
             <span>Siparişlerim</span>
-        </button>
-        <a href="/checkout" class="flex flex-col items-center bg-red-500 p-4 rounded-lg shadow-md text-white">
+        </a>
+        <a href="/checkout" id="goto_checkout_button" class="flex flex-col items-center bg-red-500 p-4 rounded-lg shadow-md text-white hidden">
             <div class="text-4xl mb-2">💳</div>
             <span>Online Öde</span>
         </a>
+        {{--        <button class="flex flex-col items-center bg-red-500 p-4 rounded-lg shadow-md text-white">--}}
+        {{--            <div class="text-4xl mb-2">🔍</div>--}}
+        {{--            <span>QR kodu okut</span>--}}
+        {{--        </button>--}}
+        {{--        <button class="flex flex-col items-center bg-red-500 p-4 rounded-lg shadow-md text-white">--}}
+        {{--            <div class="text-4xl mb-2">🧾</div>--}}
+        {{--            <span>Hesap iste</span>--}}
+        {{--        </button>--}}
+        {{--        <button class="flex flex-col items-center bg-red-500 p-4 rounded-lg shadow-md text-white">--}}
+        {{--            <div class="text-4xl mb-2">⭐</div>--}}
+        {{--            <span>Değerlendir</span>--}}
+        {{--        </button>--}}
     </div>
-    <div class="h-24"></div>
+    <div class="h-12"></div>
 @endsection

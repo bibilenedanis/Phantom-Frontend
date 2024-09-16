@@ -10,11 +10,14 @@
     <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
     <script defer src="{{ mix('js/main.js', 'assets/build') }}"></script>
 </head>
-<body class="text-gray-900 font-sans antialiased bg-gray-100" style="max-width: 800px; margin: 0 auto">
-@yield('body')
+<body class="text-gray-900 font-sans antialiased bg-gray-100 h-full" style="max-width: 800px; margin: 0 auto">
+
+<div class="min-h-screen">
+    @yield('body')
+</div>
 
 <!-- Footer -->
-<footer class="bg-red-600 text-white text-center py-4" id="footer">
+<footer class="bg-red-600 text-white text-center py-4 -mt-14" id="footer">
     <p>&copy; {{ date('Y') }} PW. All rights reserved.</p>
 </footer>
 

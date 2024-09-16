@@ -88,13 +88,28 @@ export const ShopStorage = {
         return LocalStorage.getItem('shop');
     },
 
-    // cache 1h
+    // cache 10m
     set(shop) {
-        LocalStorage.setItem('shop', shop, 60 * 60 * 1000);
+        LocalStorage.setItem('shop', shop, 10 * 60 * 1000);
     }
 }
 
-const LocalStorage = {
+export const TableStorage = {
+    get() {
+        return LocalStorage.getItem('table');
+    },
+
+    // cache 10h
+    set(table) {
+        LocalStorage.setItem('table', table, 10 * (60 * 60 * 1000));
+    },
+
+    clear() {
+        LocalStorage.removeItem('table');
+    }
+}
+
+export const LocalStorage = {
     getItem(key) {
         // get the parsed value of the given key
         let result;

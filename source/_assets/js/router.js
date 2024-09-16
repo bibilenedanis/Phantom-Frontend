@@ -6,6 +6,7 @@ import checkout from "./pages/checkout";
 import payment from "./pages/payment";
 import product from "./pages/product";
 import result3d from "./pages/3dresult";
+import call from "./pages/call";
 
 import {shopLogin, shopLogout} from "./pages/shop";
 import shopOrders from "./pages/shop_orders";
@@ -72,6 +73,10 @@ switch (window.location.pathname) {
     case '/3d-result':
     case '/3d-result/':
         result3d(pb);
+        break;
+
+    case '/call':
+        call(pb);
         break;
 
     case '/shop/login':

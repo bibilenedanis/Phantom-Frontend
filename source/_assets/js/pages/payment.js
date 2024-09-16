@@ -1,4 +1,4 @@
-import {BasketStorage} from "../storage";
+import {BasketStorage, TableStorage} from "../storage";
 import toast from "../components/toast";
 
 export  default async function payment(pb) {
@@ -32,14 +32,19 @@ export  default async function payment(pb) {
     }
 
     document.getElementById('payment_total_price').innerText = total + '₺';
-    //
-    // window.fillPaymentForm = function () {
-    //     document.getElementById('card-number').value = '5571135571135575';
-    //     document.getElementById('card-name').value = 'Pw test';
-    //     document.getElementById('expiry-month').value = '12';
-    //     document.getElementById('expiry-year').value = '24';
-    //     document.getElementById('card-cvc').value = '000';
-    // };
+
+    if (window.location.hostname === 'localhost' || window.location.hostname === 'demo.phantomwaitress.com') {
+        document.getElementById('fill-payment-form-button').classList.remove('hidden');
+        document.getElementById('fill-payment-form-button').addEventListener('click', function () {
+            document.getElementById('card-number').value = '5571135571135575';
+            document.getElementById('card-name').value = 'Pw test';
+            document.getElementById('expiry-month').value = '12';
+            document.getElementById('expiry-year').value = '24';
+            document.getElementById('card-cvc').value = '000';
+        });
+    } else {
+        document.getElementById('fill-payment-form-button').remove()
+    }
 
     document.getElementById('payment_form').addEventListener('submit', async function (e) {
         e.preventDefault();
@@ -68,6 +73,7 @@ export  default async function payment(pb) {
                 body: {
                     basket: basket,
                     note: document.getElementById('order-note').value.substring(0, 200),
+                    table: TableStorage.get(),
                 }
             })
 

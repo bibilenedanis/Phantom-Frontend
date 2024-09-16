@@ -16,10 +16,10 @@
                 Ödemeyi Tamamla
             </a>
             <a href="/menu" id="checkout_go_back" class="bg-red-500 text-white p-2 rounded-lg hover:bg-red-600 hidden">
-                Geri dön
+                Menüye Dön
             </a>
         </div>
     </main>
-    
-    <div class="h-12"></div>
+
+    <div class="h-24"></div>
 @endsection

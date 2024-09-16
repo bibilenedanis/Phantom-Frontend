@@ -5,7 +5,7 @@
 
     <div class="max-w-md mx-auto p-3 flex justify-between items-center mt-4 border-t bg-white" id="payment_total">
         <p class="text-lg font-bold">Toplam</p>
-{{--        <button onclick="fillPaymentForm()" class="bg-amber-500 rounded px-4 font-medium">Fill form</button>--}}
+        <button class="bg-amber-500 rounded px-4 font-medium hidden" id="fill-payment-form-button">Fill form</button>
         <p class="text-lg font-bold text-red-600" id="payment_total_price">1000₺</p>
     </div>
 
@@ -91,4 +91,5 @@
         </section>
     </main>
 
+    <div class="h-24"></div>
 @endsection

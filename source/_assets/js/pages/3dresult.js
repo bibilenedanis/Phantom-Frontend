@@ -1,13 +1,9 @@
 import {BasketStorage, OrderStorage} from "../storage";
 import listenOrder from "../components/listen_order";
+import getQueryString from "../components/query_string";
 
 export default async function result3d(pb) {
-    let queryString = JSON.parse('{"' + decodeURI(location.search.substring(1))
-        .replace(/"/g, '\\"')
-        .replace(/&/g, '","')
-        .replace(/=/g,'":"')
-        + '"}'
-    );
+    let queryString = getQueryString();
 
     if (!queryString.order) {
         window.location = '/menu';
