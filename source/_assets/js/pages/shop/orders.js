@@ -1,5 +1,5 @@
-import toast from "../components/toast";
-import enableNoSleep from "../components/no_sleep";
+import toast from "../../components/toast";
+import enableNoSleep from "../../components/no_sleep";
 
 window.rowColors = {
     'pending': 'bg-red-300',
@@ -89,7 +89,7 @@ function createOrderRow(rowColor, order, items) {
 
     return `
             <tr class="${rowColor}" data-order-id="${order.id}">
-<!--                <td class="py-4 px-6 border-b">Masa ${order.table}</td>-->
+                <td class="py-4 px-6 border-b">Masa ${order.table}</td>
                 <td class="py-4 px-6 border-b">
                     ${itemsToList.map(item => `<p>${item}</p>`).join('')}
                 </td>

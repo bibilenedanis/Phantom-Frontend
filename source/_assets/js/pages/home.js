@@ -1,7 +1,9 @@
-import {TableStorage} from "../storage";
+import {ShopStorage, TableStorage} from "../storage";
 import getQueryString from "../components/query_string";
 
 export default async function home(pb) {
+    window.shopInfo = ShopStorage.get();
+
     const itemsToReplace = {
         'shop_district': window.shopInfo.name + (window.shopInfo.district ? (' - ' + window.shopInfo.district) : ''),
         'shop_description': window.shopInfo.description,
@@ -40,10 +42,7 @@ export default async function home(pb) {
         }
     }
 
-    document.getElementById('action_buttons_wrapper')
-        .classList
-        .add('grid-cols-' + (actionButtonCount > 3 ? 3 : actionButtonCount));
-
+    // Set Table
     let queryString = getQueryString();
     if (queryString.table) {
         pb.collection('tables').getOne(queryString.table, {

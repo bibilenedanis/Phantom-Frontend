@@ -1,4 +1,4 @@
-import toast from '../components/toast';
+import toast from '../../components/toast';
 
 export function shopLogout(pb) {
     pb.authStore.clear();

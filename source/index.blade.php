@@ -47,16 +47,16 @@
     </div>
 
     <!-- Actions Section -->
-    <div class="grid gap-4 p-6 mt-2" id="action_buttons_wrapper">
-        <a href="/call" id="call_waitress_button" class="flex flex-col items-center bg-red-500 p-4 rounded-lg shadow-md text-white hidden">
+    <div class="flex justify-evenly items-center p-6 mt-2" id="action_buttons_wrapper">
+        <a href="/call" id="call_waitress_button" class="flex items-center bg-red-500 py-6 px-10 rounded-lg shadow-md text-white hidden">
             <div class="text-4xl mb-2">✋</div>
             <span>Garson Çağır</span>
         </a>
-        <a href="#" id="show_previous_orders_button" class="flex flex-col items-center bg-red-500 p-4 rounded-lg shadow-md text-white hidden">
+        <a href="#" id="show_previous_orders_button" class="flex items-center bg-red-500 py-6 px-10 rounded-lg shadow-md text-white hidden">
             <div class="text-4xl mb-2">🍽</div>
             <span>Siparişlerim</span>
         </a>
-        <a href="/checkout" id="goto_checkout_button" class="flex flex-col items-center bg-red-500 p-4 rounded-lg shadow-md text-white hidden">
+        <a href="/checkout" id="goto_checkout_button" class="flex items-center bg-red-500 py-6 px-10 rounded-lg shadow-md text-white hidden">
             <div class="text-4xl mb-2">💳</div>
             <span>Online Öde</span>
         </a>
