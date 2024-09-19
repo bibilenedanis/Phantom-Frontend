@@ -3,6 +3,10 @@ import getQueryString from "../components/query_string";
 
 export default async function home(pb) {
     window.shopInfo = ShopStorage.get();
+    if (!window.shopInfo) {
+        window.shopInfo = await pb.collection('shop_info').getOne('gns5q0ipgpy1o86');
+        ShopStorage.set(window.shopInfo);
+    }
 
     const itemsToReplace = {
         'shop_district': window.shopInfo.name + (window.shopInfo.district ? (' - ' + window.shopInfo.district) : ''),

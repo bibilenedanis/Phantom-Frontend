@@ -77,6 +77,35 @@ export default async function shopOrders(pb) {
 
         toast('Sipariş durumu güncellendi', '#10B981');
     };
+
+    // implement call waitresses
+    pb.collection('calls').subscribe('*', async function (e) {
+        if (e.record.status !== 'pending') {
+            return;
+        }
+
+        e.record.table = await pb.collection('tables').getOne(e.record.table_id);
+
+        document.getElementById('calling-tables').innerHTML = document.getElementById('calling-tables').innerHTML +
+            `<p class="mb-4">${e.record.table.number} numaralı masa çağırıyor</p>`;
+
+        document.getElementById('call-waitress-modal').classList.remove('hidden');
+
+        let playCount = 0;
+        document.getElementById('new_call_waitress_sound').play();
+        document.getElementById('new_call_waitress_sound').addEventListener('ended', function() {
+            playCount++;
+            if (playCount < 2) {
+                document.getElementById('new_call_waitress_sound').play();
+            }
+        });
+    });
+
+    // close call waitress modal
+    document.getElementById('close-call-waitress-modal').addEventListener('click', function () {
+        document.getElementById('calling-tables').innerHTML = '';
+        document.getElementById('call-waitress-modal').classList.add('hidden');
+    });
 }
 
 function createOrderRow(rowColor, order, items) {

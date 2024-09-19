@@ -10,7 +10,6 @@ import call from "./pages/call";
 
 import {shopLogin, shopLogout} from "./pages/shop/login";
 import shopOrders from "./pages/shop/orders";
-import shopCalls from "./pages/shop/calls";
 
 switch (window.location.pathname) {
     case '/':
@@ -56,9 +55,6 @@ switch (window.location.pathname) {
         await shopOrders(pb);
         break;
 
-    case '/shop/calls':
-        await shopCalls(pb);
-        break;
     default:
         break;
 }
