@@ -13,6 +13,12 @@ export default async function shopOrders(pb) {
         window.location.href = '/shop/login';
     }
 
+    document.getElementById('activate_sounds').addEventListener('click', function () {
+        document.getElementById('new_order_sound').play();
+        document.getElementById('new_call_waitress_sound').play();
+        this.remove();
+    });
+
     enableNoSleep();
 
     const orders = await pb.collection('orders').getFullList({

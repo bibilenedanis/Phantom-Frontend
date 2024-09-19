@@ -6,6 +6,7 @@
     <!-- Header -->
     <div class="text-center">
         <h2 class="text-2xl font-semibold text-red-500 mb-6 mt-1">Sipariş Takip Ekranı</h2>
+        <button class="bg-red-600 text-white px-4 py-2 rounded mb-4" id="activate_sounds">Aktif Et</button>
     </div>
 
     <!-- Order Table -->
